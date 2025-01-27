@@ -1,6 +1,10 @@
 export default function Entry(props) {
+  //////////////////////////////////
+  // ***METHOD 2***
+  //
   // pass object as props
-  props = props.journalEntry;
+  // props = props.journalEntry;
+
   return (
     <article className="journal-entry">
       <div className="main-image-container">

@@ -11,9 +11,19 @@ export default function Section() {
     return (
       <Entry
         key={journalEntry.id}
-        // possible to pass data object directly into props
-        // only if elements directly match
-        journalEntry={journalEntry}
+        //////////////////////////////////
+        // ***METHOD 2***
+        //
+        // possible to pass data object directly into component props
+        // only if data properties directly match
+        //
+        // journalEntry={journalEntry}
+        //
+        //////////////////////////////////
+        // ***METHOD 3***
+        //
+        // spread an object
+        {...journalEntry}
       />
     );
   });
@@ -22,7 +32,9 @@ export default function Section() {
   // render Entry component/s
   return <section className="container">{journalEntries}</section>;
 }
-
+//////////////////////////////////
+// ***METHOD 1***
+//
 // iterate over **array** data to
 // create dynamic props for Entry component/s
 //
